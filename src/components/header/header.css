@@ -1,0 +1,200 @@
+.header-up {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header-menu {
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+    gap: 20px;
+    padding-top: 40px;
+}
+.header-menu-toggle-theme-btn {
+    border: none;
+    background-color: transparent;
+    background-image: url(../../assets/toggle-to-light-theme-icon.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    /* cursor: pointer; */
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+.header-menu-toggle-theme-btn:hover {
+    opacity: 1
+}
+.header-menu-open-navbar-btn {
+    border: none;
+    background-color: transparent;
+    width: 34px;
+    height: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* cursor: pointer; */
+}
+.header-menu-open-navbar-btn span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1d1d1d;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+.header-menu-open-navbar-btn:hover span:nth-child(1) {
+    width: 90%;
+}
+  
+.header-menu-open-navbar-btn:hover span:nth-child(2) {
+    width: 70%;
+}
+  
+.header-menu-open-navbar-btn:hover span:nth-child(3) {
+    width: 50%;
+}
+.avatar {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: auto;
+    z-index: 10;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 40px;
+    color: white;
+}
+.header-content-hello {
+    font-size: 38px;
+    font-weight: 600;
+}
+.header-content-professions {
+    font-size: 20px;
+    font-weight: 400;
+}
+.header-down {
+    display: block;
+    width: 100%;
+    background-color: #1d1d1d;
+}
+.header-down-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 50px 0 50px 50px;
+    position: relative;
+}
+.header-down-content span {
+    display: block;
+    color: white;
+    font-size: 100px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+.header-down-content span:nth-child(2) {
+    padding-left: 30px;
+}
+.header-stripes,
+.header-stripes-left {
+    /* clip-path: polygon(0 0, 100% 0%, 100% 37%, 1% 98%); */
+    width: 100%;
+    height: 10vh; /* Высота полосы */
+    background: repeating-linear-gradient(
+      to right,
+      white,
+      white 50px, /* Цвет и ширина первой полоски */
+      var(--background-color-dark-theme) 30px,
+      var(--background-color-dark-theme) 100px /* Цвет и ширина второй полоски */
+      
+    );
+    transition: background-position-x 0.2s ease-in-out; /* Плавность изменения */
+    -moz-transform: skew(-45deg);
+  -webkit-transform: skew(-45deg);
+  transform: skew(-45deg);
+  }
+  .test {
+    height: 100vh;
+  }
+  .header-stripes-left {
+    /* clip-path: polygon(0 0, 100% 0%, 99% 100%, 0 37%); */
+    -moz-transform: skew(45deg);
+    -webkit-transform: skew(45deg);
+    transform: skew(45deg);
+}
+@media(max-width:1025px) {
+    .header-stripes {
+        width: 95%;
+    }
+    .header-down-content span {
+        font-size: 64px;
+    }
+    .avatar {
+        bottom: 0;
+        right: -9%;
+    }
+}
+@media(max-width:768px) {
+    .header-stripes, .header-stripes-left {
+        width: 93%;
+        height: 6vh;
+    }
+    .avatar {
+        bottom: 0;
+        right: -14%;
+        width: 283px;
+    }
+}
+
+@media(max-width:480px) {
+    .header-menu {
+        justify-content: start;
+        padding: 7px;
+        gap: 13px;
+        padding-top: 13px;
+    }
+    .avatar {
+        bottom: 0;
+        right: 24%;
+        width: 185px;
+    }
+    .header-content {
+        padding: 21px;
+    }
+    .header-content-hello {
+        font-size: 24px;
+    }
+    .header-content-professions {
+        font-size: 11px;
+    }
+    .header-down-content {
+        padding: 0;
+        height: 37vh;
+        justify-content: flex-end;
+        
+    }
+    .header-down-content span {
+        transform: rotate(-15deg);
+        padding-bottom: 20px;
+        
+    }
+    .header-stripes, .header-stripes-left {
+        width: 0;
+        height: 0;
+    }
+    .about-information-header h1 {
+        font-size: 23px;
+    }
+    .about-information-header h2 {
+        font-size: 15px;
+        margin-bottom: 21px;
+    }
+}
+

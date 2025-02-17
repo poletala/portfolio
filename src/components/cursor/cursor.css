@@ -1,0 +1,37 @@
+html, body {
+    cursor: none;
+}
+  
+  /* Белая точка */
+.white-dot-cursor {
+    position: fixed;
+    width: 8px; /* Размер точки */
+    height: 8px;
+    background-color: white; /* Белый цвет */
+    border-radius: 50%; /* Круглая форма */
+    pointer-events: none; /* Чтобы не перехватывал клики */
+    transform: translate(-50%, -50%); /* Центрирование */
+    z-index: 10000; /* Поверх других элементов */
+    mix-blend-mode: difference; /* Для контраста на любом фоне */
+}
+  
+  /* Магнитный круг */
+.magnetic-circle-cursor {
+    position: fixed;
+    width: 20px; /* Размер круга */
+    height: 20px;
+    background-color: transparent; /* Прозрачный фон */
+    border: 1px solid var(--accent-color); /* Граница */
+    border-radius: 50%; /* Круглая форма */
+    pointer-events: none; /* Чтобы не перехватывал клики */
+    transform: translate(-50%, -50%); /* Центрирование */
+    z-index: 9999; /* Под белой точкой */
+    mix-blend-mode: difference; /* Для контраста на любом фоне */
+    transition: border-color 0.2s ease-out; /* Плавное изменение цвета границы */
+
+@media (max-width: 768px) {
+    .white-dot-cursor,
+    .magnetic-circle-cursor {
+        display: none;
+    }
+}}

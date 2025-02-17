@@ -1,0 +1,35 @@
+.about-description-projects {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.about-description-projects-filter-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.about-description-projects-filter-buttons button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--accent-color);
+    font-size: 20px;
+}
+.about-description-projects-filter-buttons button:hover {
+    background-color: var(--accent-color);
+}
+.about-description-projects-slider {
+    width: 500px;
+    margin: auto;
+}
+@media (max-width:768px) {
+    .about-description-projects-slider {
+        width: 353px;
+        margin: auto;
+    }
+}
